@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <label>
+    Name:
+    <input type="text" formControlName="name" required>
+  </label>
+  <label>
+    Nickname:
+    <input type="text" formControlName="nickname" required>
+  </label>
+  <section>
+    Home Port
+    <div>
+      <label>
+        Nassau, Bahamas
+        <input type="radio" formControlName="port" value="Nassau" required>
+      </label>
+      <label>
+        New Province, Bahamas
+        <input type="radio" formControlName="port" value="New Province" required>
+      </label>
+      <label>
+        Tortuga Island, Haiti
+        <input type="radio" formControlName="port" value="Tortuga Island" required>
+      </label>
+    </div>
+  </section>
+  <input type="button" value="Load" (click)="onLoad()">
+  <input type="submit" value="Apply" [disabled]="form.invalid">
+</form>

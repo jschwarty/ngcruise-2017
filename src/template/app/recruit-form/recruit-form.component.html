@@ -1,0 +1,29 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <label>
+    Name:
+    <input type="text" name="name" [(ngModel)]="recruit.name" required>
+  </label>
+  <label>
+    Nickname:
+    <input type="text" name="nickname" [(ngModel)]="recruit.nickname" required>
+  </label>
+  <section>
+    Home Port
+    <div>
+      <label>
+        Nassau, Bahamas
+        <input type="radio" name="port" value="Nassau" [(ngModel)]="recruit.port" required>
+      </label>
+      <label>
+        New Province, Bahamas
+        <input type="radio" name="port" value="New Province" [(ngModel)]="recruit.port" required>
+      </label>
+      <label>
+        Tortuga Island, Haiti
+        <input type="radio" name="port" value="Tortuga Island" [(ngModel)]="recruit.port" required>
+      </label>
+    </div>
+  </section>
+  <input type="button" value="Load" (click)="onLoad()">
+  <input type="submit" value="Apply" [disabled]="form.invalid">
+</form>
