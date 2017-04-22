@@ -6,12 +6,12 @@ import { RecruitService } from './recruit.service';
   providers: [
     {
       provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => NicknameUniqueValidatorDirective),
+      useExisting: forwardRef(() => NicknameUniqueDirective),
       multi: true
     }
   ]
 })
-export class NicknameUniqueValidatorDirective implements Validator {
+export class NicknameUniqueDirective implements Validator {
   constructor(private recruitService: RecruitService) {
   }
 

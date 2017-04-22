@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecruitFormComponent } from './recruit-form/recruit-form.component';
 import { RecruitService } from '../../shared/recruit.service';
-import { NicknameUniqueValidatorDirective } from '../../shared/nickname-unique.validator';
+import { NicknameUniqueDirective } from '../../shared/nickname-unique.directive';
 import { NameFieldComponent } from '../../shared/name-field/name-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecruitFormComponent,
-    NicknameUniqueValidatorDirective,
+    NicknameUniqueDirective,
     NameFieldComponent
   ],
   imports: [
