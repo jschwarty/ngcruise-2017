@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class RecruitService {
   private nicknames = [
     'Dread Pirate Roberts',
-    'Khaleesi'
+    'Stormborn'
   ];
 
   nicknameInUse(nickname) {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RecruitService } from '../recruit.service';
+import { RecruitService } from '../../../shared/recruit.service';
 
 @Component({
   selector: '[appRecruitForm]',

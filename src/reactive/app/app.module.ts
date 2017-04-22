@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RecruitFormComponent } from './recruit-form/recruit-form.component';
-import { RecruitService } from './recruit.service';
-import { NicknameUniqueValidatorDirective } from './nickname-unique.validator';
+import { RecruitService } from '../../shared/recruit.service';
+import { NicknameUniqueValidatorDirective } from '../../shared/nickname-unique.validator';
 
 @NgModule({
   declarations: [
