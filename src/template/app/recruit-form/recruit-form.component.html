@@ -1,8 +1,7 @@
 <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-  <label>
-    Name:
+  <app-name-field label="Name:">
     <input type="text" name="name" [(ngModel)]="recruit.name" required>
-  </label>
+  </app-name-field>
   <label>
     Nickname:
     <input type="text" name="nickname" [(ngModel)]="recruit.nickname" required appNicknameUnique>

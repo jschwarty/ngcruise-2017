@@ -1,8 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
-  <label>
-    Name:
+  <app-name-field label="Name:">
     <input type="text" formControlName="name" required>
-  </label>
+  </app-name-field>
   <label>
     Nickname:
     <input type="text" formControlName="nickname" required appNicknameUnique>
