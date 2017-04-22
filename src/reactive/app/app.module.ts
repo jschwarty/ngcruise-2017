@@ -5,11 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecruitFormComponent } from './recruit-form/recruit-form.component';
 import { RecruitService } from './recruit.service';
+import { NicknameUniqueValidatorDirective } from './nickname-unique.validator';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecruitFormComponent
+    RecruitFormComponent,
+    NicknameUniqueValidatorDirective
   ],
   imports: [
     BrowserModule,
