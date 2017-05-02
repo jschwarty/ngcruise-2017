@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RecruitService } from '../../../shared/recruit.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: '[appRecruitForm]',
@@ -7,14 +8,9 @@ import { RecruitService } from '../../../shared/recruit.service';
   styleUrls: ['./recruit-form.component.scss']
 })
 export class RecruitFormComponent {
-  recruit;
+  @ViewChild(NgForm) form;
 
   constructor(private recruitService: RecruitService) {
-    this.recruit = {
-      name: '',
-      nickname: '',
-      port: ''
-    };
   }
 
   onSubmit(formValue) {
@@ -22,6 +18,7 @@ export class RecruitFormComponent {
   }
 
   onLoad() {
-    this.recruit = this.recruitService.get();
+    const recruit = this.recruitService.get();
+    this.form.setValue(recruit);
   }
 }

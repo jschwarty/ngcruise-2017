@@ -1,25 +1,25 @@
-<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+<form (ngSubmit)="onSubmit(form.value)">
   <app-name-field label="Name:">
-    <input type="text" name="name" [(ngModel)]="recruit.name" required>
+    <input type="text" name="name" ngModel required>
   </app-name-field>
   <label>
     Nickname:
-    <input type="text" name="nickname" [(ngModel)]="recruit.nickname" required appNicknameUnique>
+    <input type="text" name="nickname" ngModel required appNicknameUnique>
   </label>
   <section>
     Home Port
     <div>
       <label>
         Nassau, Bahamas
-        <input type="radio" name="port" value="Nassau" [(ngModel)]="recruit.port" required>
+        <input type="radio" name="port" value="Nassau" ngModel required>
       </label>
       <label>
         New Province, Bahamas
-        <input type="radio" name="port" value="New Province" [(ngModel)]="recruit.port" required>
+        <input type="radio" name="port" value="New Province" ngModel required>
       </label>
       <label>
         Tortuga Island, Haiti
-        <input type="radio" name="port" value="Tortuga Island" [(ngModel)]="recruit.port" required>
+        <input type="radio" name="port" value="Tortuga Island" ngModel required>
       </label>
     </div>
   </section>
