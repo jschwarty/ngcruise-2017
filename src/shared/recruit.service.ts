@@ -21,7 +21,8 @@ export class RecruitService {
     return {
       name: 'Jack Sparrow',
       nickname: 'Captain Jack',
-      port: 'Tortuga Island'
+      port: 'Tortuga Island',
+      favoriteColor: 'black'
     };
   }
 }

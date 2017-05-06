@@ -7,13 +7,15 @@ import { RecruitFormComponent } from './recruit-form/recruit-form.component';
 import { RecruitService } from '../../shared/recruit.service';
 import { NicknameUniqueDirective } from '../../shared/nickname-unique.directive';
 import { NameFieldComponent } from '../../shared/name-field/name-field.component';
+import { FavoriteColorComponent } from '../../shared/favorite-color.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecruitFormComponent,
     NicknameUniqueDirective,
-    NameFieldComponent
+    NameFieldComponent,
+    FavoriteColorComponent
   ],
   imports: [
     BrowserModule,

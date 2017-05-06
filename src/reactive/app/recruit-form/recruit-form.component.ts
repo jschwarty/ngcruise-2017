@@ -13,9 +13,10 @@ export class RecruitFormComponent {
   constructor(private recruitService: RecruitService,
               formBuilder: FormBuilder) {
     this.form = formBuilder.group({
-      name: formBuilder.control(''),
-      nickname: formBuilder.control(''),
-      port: formBuilder.control('')
+      name: '',
+      nickname: '',
+      port: '',
+      favoriteColor: ''
     });
   }
 
@@ -25,6 +26,6 @@ export class RecruitFormComponent {
 
   onLoad() {
     const recruit = this.recruitService.get();
-    this.form.setValue(recruit);
+    this.form.patchValue(recruit);
   }
 }

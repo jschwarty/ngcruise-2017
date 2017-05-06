@@ -6,6 +6,10 @@
     Nickname:
     <input type="text" formControlName="nickname" required appNicknameUnique>
   </label>
+  <div *ngIf="form.get('nickname').hasError('nicknameUnique')">
+    Come now, you can think of a nickname that is original!
+  </div>
+  <app-favorite-color formControlName="favoriteColor" required></app-favorite-color>
   <section>
     Home Port
     <div>

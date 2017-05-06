@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./recruit-form.component.scss']
 })
 export class RecruitFormComponent {
-  @ViewChild(NgForm) form;
+  @ViewChild(NgForm) ngForm;
 
   constructor(private recruitService: RecruitService) {
   }
@@ -19,6 +19,6 @@ export class RecruitFormComponent {
 
   onLoad() {
     const recruit = this.recruitService.get();
-    this.form.setValue(recruit);
+    this.ngForm.form.patchValue(recruit);
   }
 }

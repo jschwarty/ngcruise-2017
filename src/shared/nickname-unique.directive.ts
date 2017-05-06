@@ -2,7 +2,7 @@ import { Directive, forwardRef } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 import { RecruitService } from './recruit.service';
 @Directive({
-  selector: '[appNicknameUnique]',
+  selector: '[appNicknameUnique][formControl], [appNicknameUnique][formControlName], [appNicknameUnique][ngModel]',
   providers: [
     {
       provide: NG_VALIDATORS,
@@ -20,7 +20,7 @@ export class NicknameUniqueDirective implements Validator {
       return null;
     }
     if (this.recruitService.nicknameInUse(c.value)) {
-      return {nicknameInUse: {valid: false}};
+      return {nicknameUnique: {valid: false}};
     } else {
       return null;
     }

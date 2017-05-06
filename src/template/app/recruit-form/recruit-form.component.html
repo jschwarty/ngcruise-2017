@@ -1,11 +1,15 @@
-<form (ngSubmit)="onSubmit(form.value)">
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
   <app-name-field label="Name:">
     <input type="text" name="name" ngModel required>
   </app-name-field>
   <label>
     Nickname:
-    <input type="text" name="nickname" ngModel required appNicknameUnique>
+    <input type="text" name="nickname" ngModel required appNicknameUnique #nickname="ngModel">
   </label>
+  <div *ngIf="nickname.hasError('nicknameUnique')">
+    Come now, you can think of a nickname that is original!
+  </div>
+  <app-favorite-color name="favoriteColor" ngModel required></app-favorite-color>
   <section>
     Home Port
     <div>
